@@ -1,0 +1,57 @@
+
+
+
+<div class="container">
+    
+    <h1>Rock Paper Scissors</h1>
+    
+    <div class="nameid">
+        <input class="name" type="Name" placeholder="Name" id="username" [(ngModel)]="gamestart" />
+    </div><br>
+  
+
+    <div class="buttons">
+        <button id="rock" (click)="getResult2($event)">Rock</button>
+        <button id="paper" (click)="getResult2($event)">Paper</button>
+        <button id="scissors" (click)="getResult2($event)">Scissors</button>
+    </div>
+
+    <div *ngIf="result != '' " class="result-div">
+        <div *ngIf="!isWinner && !isLooser" class="ongoing">
+            <div class="result">
+                <p>{{gamestart}} your answer: {{playerAnswer}}</p>
+                <p>Computer answer: {{computerAnswer}}</p>
+                <p>{{result}} 
+                    <span *ngIf="result == 'Drow'">😎</span>
+                    <span *ngIf="result == 'You Win!'">🎉</span>
+                    <span *ngIf="result == 'You Loose!'">🤔</span>
+                </p>
+            </div>
+            <div class="score">
+                <p>Score:</p>
+                <div class="scores">
+                    <p>You: {{playerScore}} </p>
+                    <p>Comp: {{compScore}} </p>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="isWinner || isLooser || isDraw" class="end">
+            <div class="final-result">
+                <h2 *ngIf="isWinner">You Won! 🎉</h2>
+                <h2 *ngIf="isLooser">You Lost! 🤦‍♀️</h2>
+                <h2 *ngIf="isDraw">Match draw! 🤦‍♀️</h2>
+
+                <button (click)="reload()">Replay</button>
+            </div>
+        </div>
+
+        
+    </div>
+
+      
+</div>
+
+<div class="nav">
+    <a class="nav-link active" aria-current="page" routerLink="/score" style="color: rgb(255, 255, 255);">&nbsp;score</a>
+  </div>
+

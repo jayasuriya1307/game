@@ -1,0 +1,185 @@
+You can add global styles to this file, and also import other style files
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Wellfleet', cursive;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(#dc9ae2, #d142a6, #df96b8);
+    background: rgb(45,18,119);
+    background: radial-gradient(circle, rgba(45, 18, 119, 0.721) 0%, rgba(21, 24, 219, 0.658) 35%, rgba(192, 17, 227, 0.653) 100%);
+    font-size: .7rem;
+}
+
+app-root {
+    width: 100%;
+}
+
+.name{
+    height: 3rem;
+    width: 10rem;
+    text-align: center;
+    border-radius: 120px;
+    border-color: #8078dc;
+
+
+
+} 
+
+.container {
+    width: 90%;
+    margin-inline: auto;
+    max-width: 700px;
+    padding: 3rem 1rem;
+    color: #e6bcd9;
+    color: #fff;
+    box-shadow: 1px 1px 3px #cccccc3d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.3rem;
+    background: #cccccc2a;
+    background: #fdfdfd23;
+    backdrop-filter: blur(120px);
+    border-radius: 2rem;
+}
+
+
+
+.buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+button {
+    background: transparent;
+    color: #e6bcd9;
+    color: #fff;
+    width: 60%;
+    min-width: 90px;
+    padding: .7rem 1rem;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    box-shadow: 1px 1px 6px #cccccc9a;
+    cursor: pointer;
+    position: relative;
+}
+
+button::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50px;
+    background: radial-gradient(circle, rgba(45, 18, 119, 0.281) 0%, rgba(21, 24, 219, 0.303) 35%, rgba(192, 17, 227, 0.206) 100%);
+    z-index: -1;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}
+
+button:hover::after {
+    opacity: 1;
+}
+
+.result-div  div.result{
+    margin-bottom: 1rem;
+}
+
+p {
+    font-weight: 400;
+    font-size: 1.3em;
+}
+
+.scores {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+}
+
+.scores p {
+    margin-top: 1rem ;
+    padding: 1rem 2rem;
+    box-shadow: 1px 1px 3px #cccccc3d;
+    border-radius: 50%;
+}
+
+.final-result {
+    margin-top: 2rem;
+}
+
+
+.final-result button {
+    margin-top: 2rem;
+    min-width: 140px
+}
+
+h2 {
+    font-size: 2.4em;
+}
+
+@media screen and (min-width: 380px){
+    body {
+        font-size: 1rem;
+    }
+    .buttons {
+        flex-direction: row;
+        gap: 2rem;
+    }
+    button {
+        font-size: 1rem;
+        padding: .8rem 1rem;
+        width: 25%;
+    }
+}
+@media screen and (min-width: 700px){
+    body {
+        font-size: 1.3rem;
+    }
+    button {
+        font-size: 1.3rem;
+        padding: .8rem 2rem;
+    }
+}
+
+.nav{
+    
+  
+    height: 3rem;
+    width: 10rem;
+    text-align: center;
+    border-radius: 6rem;
+    background-color: rgb(111, 108, 193);
+  font-size: 2rem;
+   
+    margin-left: 43rem;
+    
+}
+
+.naes{
+    height: 3rem;
+    width: 10rem;
+    text-align: center;
+    border-radius: 6rem;
+    background-color: rgb(111, 108, 193);
+  font-size: 2rem;
+   
+    margin-left: 43rem;
+    
+
+}
